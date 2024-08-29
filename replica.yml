@@ -4,18 +4,18 @@ kind: ReplicaSet
 metadata:
   name: nginx
 spec:
-  # 1 Pod should exist at all times.
+  #1 pod should exist at all times
   replicas: 1
   selector:
     matchLabels:
       app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
+    template:
+      metadata:
+        labels: 
+          app: nginx
     spec:
-      containers:
-      - name: nginx
+      Containers:
+      - name: c1
         image: nginx
         ports:
         - containerPort: 80
